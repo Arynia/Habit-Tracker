@@ -17,6 +17,7 @@ void CreateDatabase()
         //Creating the command that will be sent to the database
         using (var tableCmd = connection.CreateCommand())
         {
+            connection.Open();
             //Declaring what is that command (in SQL syntax)
             tableCmd.CommandText =
                 @"CREATE TABLE IF NOT EXISTS drinking_water (
